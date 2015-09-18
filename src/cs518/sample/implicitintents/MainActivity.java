@@ -4,14 +4,15 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 import android.content.Intent;
-import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
 /**
  * Sample code for Implicit Intents
- * @author tricia
+ * Implicit means the OS uses the URI to determine the 
+ * activity that is launched. 
+ * @author Tricia
  *
  */
 public class MainActivity extends Activity {
@@ -22,7 +23,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		spinner = (Spinner) findViewById(R.id.spinner);
-		ArrayAdapter adapter = ArrayAdapter.createFromResource(this,
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
 				R.array.intents, android.R.layout.simple_spinner_item);
 		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinner.setAdapter(adapter);

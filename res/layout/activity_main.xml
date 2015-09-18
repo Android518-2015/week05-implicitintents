@@ -15,7 +15,13 @@
     <Button
         android:id="@+id/trigger"
         android:onClick="intentSelected"
-        android:text="Fire Intent" >
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/trigger" >
     </Button>
+    <TextView>
+        android:onClick="intentSelected"
+        android:layout_gravity="fill_horizontal"
+        android:text="@string/usage" >
+    </TextView>
 
 </GridLayout>
